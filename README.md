@@ -30,8 +30,8 @@ kafka-console-producer.sh --broker-list $KAFKA --topic test
 ```
 
 ```bash
-export ZOOKEEPER=$(docker-machine ip $(docker-machine active)):2181
-kafka-console-consumer.sh --zookeeper $ZOOKEEPER --topic test
+export KAFKA=$(docker-machine ip $(docker-machine active)):9092
+kafka-console-consumer.sh --bootstrap-server $KAFKA --topic test
 ```
 
 In the box
