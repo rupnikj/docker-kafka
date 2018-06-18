@@ -1,7 +1,12 @@
 Kafka in Docker
 ===
 
-This repository provides everything you need to run Kafka in Docker.
+This repository provides everything you need to run Kafka in Docker. This is a fork
+from https://github.com/spotify/docker-kafka, where the main changes are:
+
+- removal of legacy kafka proxy
+- bumped to new version + fixed archive url
+- fixed init bug (missing newline that messes up kafka server config)
 
 Why?
 ---
@@ -31,7 +36,7 @@ kafka-console-consumer.sh --zookeeper $ZOOKEEPER --topic test
 
 In the box
 ---
-* **spotify/kafka**
+* **rupnikj/kafka**
 
   The docker image with both Kafka and Zookeeper. Built from the `kafka`
   directory.
